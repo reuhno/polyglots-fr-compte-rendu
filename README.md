@@ -1,76 +1,230 @@
-# CR des réunions WordPress FR : skill de compte-rendu
+# 📝 Le compte-rendu de réunion en 30 secondes
 
-Projet communautaire, non officiel : il n'est ni produit ni approuvé par la WordPress Foundation, ni par l'équipe Polyglots.
+**Personne ne veut faire le CR ? Plus besoin de volontaire.**
+Copiez la réunion Slack, collez-la dans votre IA, relisez, publiez.
 
-## À quoi ça sert
+Ce dépôt contient un **skill** : une fiche d'instructions qui apprend à une IA (Claude, ChatGPT, Mistral Le Chat, Gemini, Codex…) à rédiger les comptes rendus des réunions de l'équipe de traduction francophone de WordPress, **au format habituel de l'équipe**, prêts à publier sur [fr.wordpress.org/team](https://fr.wordpress.org/team/).
 
-Ce dossier contient un prompt (un « skill ») qui transforme le copier-coller brut d'une réunion Slack de l'équipe de traduction (ou de documentation) de WordPress francophone en compte-rendu au format habituel de l'équipe, prêt à publier sur https://fr.wordpress.org/team/.
+> Projet communautaire, non officiel : il n'est ni produit ni approuvé par la WordPress Foundation, ni par l'équipe Polyglots.
 
-L'IA nettoie le copier-coller (messages hors ordre, aperçus de liens, emojis, plaisanteries), classe les échanges par sujet, résume les débats, liste les propositions concurrentes et note les décisions. Ce qu'elle ne sait pas (numéro de réunion, pseudo WordPress.org, date de la prochaine réunion…) est marqué `[À VÉRIFIER : …]`.
+---
 
-**Relecture humaine obligatoire.** Une IA peut se tromper : attribuer un avis à la mauvaise personne, rater une nuance, écrire une décision qui n'a pas été prise, mettre un pseudo qui renvoie vers le profil de quelqu'un d'autre. Une personne de l'équipe qui a assisté à la réunion doit relire le CR en entier et vérifier chaque pseudo sur profiles.wordpress.org. Elle doit aussi résoudre chaque `[À VÉRIFIER]`, et c'est elle seule qui publie. Chaque réponse de l'IA commence par cet avertissement et se termine par une liste de contrôle « Relecture avant publication ».
+## ✨ Ce que ça fait
 
-## Copier la réunion depuis Slack
+Vous collez ceci (le désordre habituel de Slack) :
 
-1. Ouvrir le canal (#traductions ou #documentation) à l'heure de la réunion.
-2. Sélectionner **de la première à la dernière ligne** de la réunion : de la première phrase du jour (« Hello, c'est sur Slack ? ») jusqu'au message de clôture, et plus loin si des réponses tardives se rapportent à la réunion.
-3. Copier-coller dans la conversation avec l'IA.
-4. Éviter, si possible, les fils de discussion (réponses en fil) : leurs messages arrivent hors ordre. Si la réunion en contient, les copier quand même : le skill les remet dans l'ordre.
-5. Indiquer le numéro de la réunion et, si le texte ne la contient pas, la date.
+```text
+Claire Fontaine  [12 h 28]
+alors on m'a soumis une demande pendant cette journée concernant "loader"
+[12 h 29]https://translate.wordpress.org/projects/wp-plugins/pagefluent/ pour du contexte
+Sophie Garnier  [12 h 30]
+Chargement ?
+Lucas Bernard  [12 h 39]
+"Indicateur de chargement" ?
+Thomas Girard  [12 h 40]
+J'aime bien le mot indicateur
+…
+```
 
-## Quel modèle d'IA ?
+Vous obtenez cela :
 
-Prendre un modèle de bon niveau : Claude Sonnet ou Opus, GPT-5, Mistral Large, Gemini Pro. Les petits modèles (Claude Haiku, versions « mini » ou « small ») suivent mal les règles : lors des tests, l'un d'eux a oublié un participant, a mal placé des sujets dans le gabarit et a prêté à des participants des propos qu'ils n'avaient pas tenus. Quel que soit le modèle, la relecture humaine reste obligatoire.
+```markdown
+### Comment traduire « loader » ?
 
-## Installation selon l'outil
+Propositions :
+- « Chargement », proposé par Sophie.
+- « Indicateur de chargement », proposé par Lucas, préféré par Thomas, Claire et Hugo.
+- …
 
-Pour tous les outils, la méthode de base fonctionne : coller le contenu de `SKILL.md` en tête de la conversation, puis le copier-coller de la réunion.
+📌 Pas de décision : sujet reporté à la prochaine réunion.
+```
 
-| Outil | Méthode |
+En détail, l'IA :
+
+- 🧹 **nettoie** le copier-coller : messages hors ordre, aperçus de liens, emojis, plaisanteries, messages postés après la fin ;
+- 🗂️ **range** les échanges dans le gabarit de l'équipe : ordre du jour, participants, statistiques, questions abordées ;
+- ⚖️ **résume** les débats : qui propose quoi, avec quels arguments ;
+- 📌 **note** les décisions… et seulement les vraies : elle n'invente jamais de décision ;
+- 🏷️ **marque** ce qu'elle ne sait pas avec `[À VÉRIFIER : …]` (numéro de réunion, pseudo, date) au lieu de deviner.
+
+---
+
+## ⚠️ Avant tout : une relecture humaine, toujours
+
+L'IA prépare un **brouillon**. Elle peut se tromper : prêter un avis à la mauvaise personne, rater une nuance, écrire un pseudo qui renvoie vers le profil de quelqu'un d'autre.
+
+Une personne **présente à la réunion** relit donc le CR en entier avant de le publier. Ça prend cinq minutes, pas une heure. Chaque réponse de l'IA commence par ce rappel et se termine par une liste de contrôle, à suivre point par point :
+
+- [ ] chaque pseudo ouvert sur `https://profiles.wordpress.org/<pseudo>/` ;
+- [ ] personne d'oublié dans les participants ;
+- [ ] chaque avis attribué à la bonne personne ;
+- [ ] aucune décision 📌 inventée ;
+- [ ] chiffres, dates et liens justes ;
+- [ ] tous les `[À VÉRIFIER]` résolus.
+
+---
+
+## 🚀 Démarrer : choisissez votre chemin
+
+### Chemin 1 : sans rien installer (recommandé pour essayer)
+
+Ça marche avec **n'importe quelle IA** : Claude.ai, ChatGPT, Le Chat, Gemini…
+
+**Étape 1.** Copiez les instructions dans votre presse-papiers.
+
+Sur Mac ou Linux, dans le Terminal :
+
+```bash
+curl -s https://raw.githubusercontent.com/reuhno/polyglots-fr-compte-rendu/main/SKILL.md | pbcopy
+```
+
+Sur Windows, dans PowerShell :
+
+```powershell
+irm https://raw.githubusercontent.com/reuhno/polyglots-fr-compte-rendu/main/SKILL.md | Set-Clipboard
+```
+
+Sans terminal : ouvrez [SKILL.md en version brute](https://raw.githubusercontent.com/reuhno/polyglots-fr-compte-rendu/main/SKILL.md), puis tout sélectionner et copier.
+
+**Étape 2.** Ouvrez une **nouvelle conversation** et collez les instructions.
+
+**Étape 3.** Dans le même message, ou juste après, collez la réunion Slack et ajoutez par exemple :
+
+> 101e réunion, lundi 5 octobre 2026, canal #traductions. Fais-moi le CR.
+
+**Étape 4.** Relisez avec la liste de contrôle, puis publiez (voir [Publier sur fr.wordpress.org](#-publier-sur-frwordpressorg)).
+
+### Chemin 2 : Claude Code
+
+Installez le skill une fois pour toutes :
+
+```bash
+git clone https://github.com/reuhno/polyglots-fr-compte-rendu.git ~/.claude/skills/cr-reunion-wp-fr
+```
+
+Ensuite, dans Claude Code, tapez `/cr-reunion-wp-fr` et collez la réunion. Claude le propose aussi tout seul quand vous collez une réunion en demandant un CR.
+
+### Chemin 3 : Codex
+
+```bash
+git clone https://github.com/reuhno/polyglots-fr-compte-rendu.git ~/.agents/skills/cr-reunion-wp-fr
+```
+
+Puis, dans Codex, appelez `$cr-reunion-wp-fr` et collez la réunion. Ce chemin est celui de la [documentation d'OpenAI sur les skills](https://learn.chatgpt.com/docs/build-skills), consultée le 7 octobre 2026.
+
+### Chemin 4 : un assistant permanent dans votre IA habituelle
+
+Pour ne pas recoller les instructions à chaque fois, créez un assistant dédié et collez le contenu de `SKILL.md` dans ses instructions :
+
+| Outil | Où le créer |
 |---|---|
-| Claude.ai | Créer un Projet et coller `SKILL.md` dans les instructions du projet, ou importer le dossier compressé en zip comme Skill (Réglages, fonctionnalités, Skills) (à vérifier). |
-| Claude Code | Copier le dossier dans `~/.claude/skills/cr-reunion-wp-fr/` (le fichier `SKILL.md` à la racine du dossier). |
-| Codex | Dossier du skill dans `$HOME/.agents/skills/` (utilisateur) ou `.agents/skills/` dans le dépôt, d'après la documentation d'OpenAI (voir ci-dessous). Invocation : `$cr-reunion-wp-fr`. |
-| Mistral Le Chat | Créer un Agent, copier le contenu de `SKILL.md` dans les instructions (à vérifier). |
-| ChatGPT | Créer un GPT personnalisé et coller le contenu de `SKILL.md` dans les instructions (à vérifier). |
-| Gemini | Créer un Gem et coller le contenu de `SKILL.md` dans les instructions (à vérifier). |
+| Claude.ai | un **Projet** (instructions du projet) |
+| ChatGPT | un **GPT personnalisé** |
+| Mistral Le Chat | un **Agent** |
+| Gemini | un **Gem** |
 
-**Source vérifiée pour Codex** : la page https://developers.openai.com/codex/skills renvoie vers https://learn.chatgpt.com/docs/build-skills (consultée le 7 octobre 2026). Elle indique : « `$CWD/.agents/skills` et `$REPO_ROOT/.agents/skills` » pour un dépôt, « `$HOME/.agents/skills` » pour l'utilisateur et « `/etc/codex/skills` » pour l'administrateur ; un skill est un dossier avec un `SKILL.md` portant `name` et `description` ; appel explicite par `$nom-du-skill`. Le chemin `~/.codex/skills/` n'y figure pas.
+Si l'outil accepte des fichiers joints, ajoutez aussi votre table des participants (voir plus bas). Ces menus changent souvent : si vous ne les trouvez pas, le chemin 1 marche toujours.
 
-Les chemins des autres outils (Claude.ai, Mistral, ChatGPT, Gemini) n'ont pas été vérifiés dans cette version : la méthode « coller `SKILL.md` en tête de conversation » reste la valeur sûre.
+### Mettre à jour (chemins 2 et 3)
 
-Les fichiers joints (`modeles/`, `participants.md`, `exemples/`) ne sont lus que si l'outil le permet ; sinon l'essentiel est dans `SKILL.md`. Dans un GPT, un Gem ou un Agent, joindre `participants.md` si l'outil accepte des fichiers de connaissance.
+```bash
+git -C ~/.claude/skills/cr-reunion-wp-fr pull
+```
 
-## Contenu du dossier
+Pour Codex, remplacez `~/.claude/skills` par `~/.agents/skills`.
 
-- `SKILL.md` : le prompt complet (rôle, nettoyage, règles de rédaction, gabarits traduction et documentation, option anonymisation, option « version blocs »).
-- `modeles/traduction.md` et `modeles/documentation.md` : squelettes vides à remplir.
-- `modeles/composition-officielle.html` : la composition « CR réunion traduction » de fr.wordpress.org/team (trame de la version blocs, § 13 de `SKILL.md`), telle que l'éditeur actuel la sérialise.
-- `modeles/composition-officielle.json` : la même composition, exportée par l'équipe le 2026-10-07 (format d'export des compositions WordPress, importable dans un autre site par « Modèles », « Importer depuis JSON »).
-- `participants.md` : table d'exemple, entièrement fictive, au format attendu : pseudos WordPress.org (et Slack quand ils sont connus). La vraie table de l'équipe va dans `participants.local.md` (même format), ignoré par git ; le skill la lit en priorité si elle est fournie. Les lignes avec « ? » sont à compléter par l'équipe. Elle sert à écrire les pseudos justes dans la liste des participants.
-- `exemples/` : un cas pour tester. La conversation est réelle mais anonymisée : les noms, pseudos et liens Slack sont fictifs.
+---
 
-## Tester avec les exemples
+## 📋 Bien copier la réunion depuis Slack
 
-Les noms, pseudos et liens Slack de l'exemple sont fictifs ; la conversation, elle, est réelle mais anonymisée.
+1. Ouvrez le canal (#traductions ou #documentation) à l'heure de la réunion.
+2. Sélectionnez **de la première à la dernière ligne**, du premier « Hello » au message de clôture.
+3. Copiez, puis collez dans la conversation avec l'IA.
 
-1. Dans un outil installé comme ci-dessus, coller `exemples/2026-10-05-entree.txt` et préciser : « 101e réunion, lundi 5 octobre 2026, canal #traductions ».
-2. Comparer la réponse à `exemples/2026-10-05-cr-attendu.md`. Vérifier surtout :
-   - le CR ne contient pas le point « Choix de la personne responsable du compte-rendu » (il n'a pas eu lieu) ;
-   - les pseudos sont ceux de WordPress.org ou `@[À VÉRIFIER]`, pas ceux de Slack ;
-   - le sondage n'est pas présenté comme une décision, et ne donne pas de chiffres ;
-   - les messages postés après la clôture ne sont pas intégrés comme des échanges ;
-   - la prochaine réunion est marquée `[À VÉRIFIER]` ;
-   - chaque sujet débattu se termine par une ligne 📌.
-3. L'écart de formulation est normal ; ce sont les omissions et inventions qui comptent.
+💡 **Astuce pour les réunions** : répondez dans le canal plutôt qu'en fil de discussion. Les réponses en fil arrivent dans le désordre au copier-coller. Le skill sait les remettre en ordre, mais c'est plus fiable sans.
 
-## Coller le CR dans WordPress
+---
 
-À confirmer sur fr.wordpress.org avec l'équipe avant la première publication :
+## 👥 Les bons pseudos WordPress.org
 
-- **Version Markdown** (par défaut) : dans l'éditeur visuel de WordPress, coller le texte ; l'éditeur de blocs convertit le Markdown en blocs (titres, listes, paragraphes). Le titre du post se saisit dans le champ « titre ». Vérifier les niveaux de titre, la ligne 📌 et le séparateur.
-- **Version blocs** : demander « version blocs » à l'IA, puis, dans l'éditeur, ouvrir l'éditeur de code (menu « Options », « Éditeur de code »), coller le HTML, revenir à l'éditeur visuel. Ce HTML suit la composition « CR réunion traduction » de l'équipe, déjà remplie : inutile d'insérer la composition avant. Testé le 2026-10-07 dans WordPress Playground (WordPress 7.1) : aucun bloc signalé comme invalide, colonnes et lignes 📌 comprises.
-- Dans les deux cas : catégorie et étiquettes de l'équipe (`compte-rendu`, `traduction`, `traductions` pour la traduction ; `compte-rendu`, `documentation` pour la documentation), puis relecture de tous les `[À VÉRIFIER]` avant de publier.
+Slack ne donne que les noms d'affichage, pas les pseudos WordPress.org. Le skill les prend dans une **table des participants** :
+
+- `participants.md` est un **exemple fictif**, qui montre le format ;
+- la vraie table de l'équipe se garde dans `participants.local.md`, que git ignore et que le skill lit en priorité.
+
+Pour la créer, avec le chemin 2 :
+
+```bash
+cp ~/.claude/skills/cr-reunion-wp-fr/participants.md ~/.claude/skills/cr-reunion-wp-fr/participants.local.md
+```
+
+Remplacez ensuite les lignes d'exemple par les vrais noms et pseudos. Avec les chemins 1 et 4, collez la table (ou joignez le fichier) avec la réunion.
+
+Sans table, rien de grave : l'IA écrit `@[À VÉRIFIER]` et vous complétez à la relecture.
+
+---
+
+## 🧠 Quelle IA choisir ?
+
+Un modèle **de bon niveau** : Claude Sonnet ou Opus, GPT-5, Mistral Large, Gemini Pro.
+
+Les petits modèles (Claude Haiku, versions « mini » ou « small ») suivent mal les règles. Lors des tests, l'un d'eux a oublié un participant, a mal rangé des sujets et a prêté à quelqu'un des propos qu'il n'avait pas tenus.
+
+---
+
+## 🌐 Publier sur fr.wordpress.org
+
+Deux formats au choix :
+
+**Version Markdown (par défaut)**
+1. Créez un nouvel article et saisissez le titre donné par l'IA dans le champ « titre ».
+2. Collez le texte dans l'éditeur : il se transforme en titres, listes et paragraphes.
+3. Vérifiez les niveaux de titre, les lignes 📌 et le séparateur.
+
+Cette conversion n'a pas encore été testée sur fr.wordpress.org.
+
+**Version blocs**, fidèle à la composition de l'équipe (lignes 📌 sur fond bleu pâle, colonnes « pour / contre ») :
+1. Demandez à l'IA « version blocs ».
+2. Dans l'éditeur : menu ⋮ → **Éditeur de code**, collez le HTML.
+3. Revenez à l'**Éditeur visuel** : tout est en place, inutile d'insérer la composition avant.
+
+Le collage a été testé le 7 octobre 2026 dans WordPress Playground (WordPress 7.1) : aucun bloc signalé invalide.
+
+Dans les deux cas, choisissez la catégorie « Réunions de l'équipe de traduction » et les étiquettes `compte-rendu` et `traductions`. Pour l'équipe Documentation, prenez les étiquettes `compte-rendu` et `documentation`.
+
+---
+
+## 🧪 Essayer sans réunion sous la main
+
+Le dossier `exemples/` contient une vraie réunion, anonymisée : noms, pseudos et liens Slack fictifs.
+
+1. Collez `exemples/2026-10-05-entree.txt` en précisant : « 101e réunion, lundi 5 octobre 2026, canal #traductions ».
+2. Comparez le résultat avec `exemples/2026-10-05-cr-attendu.md`.
+
+Les formulations peuvent différer, c'est normal. Ce qui compte :
+- aucun oubli : participants, sujets ;
+- aucune invention : décision, pseudo, chiffre ;
+- des pseudos WordPress.org, pas Slack ;
+- les messages postés après la clôture seulement listés dans la relecture ;
+- une ligne 📌 sur chaque sujet à trancher, aucune sur un simple point d'information.
+
+---
+
+## 📁 Ce qu'il y a dans le dépôt
+
+| Fichier | Rôle |
+|---|---|
+| `SKILL.md` | Les instructions complètes : c'est le seul fichier indispensable. |
+| `participants.md` | Exemple fictif de table des pseudos (la vraie va dans `participants.local.md`). |
+| `modeles/traduction.md`, `modeles/documentation.md` | Les squelettes de CR des deux équipes. |
+| `modeles/composition-officielle.html` et `.json` | La composition « CR réunion traduction » de fr.wordpress.org/team, trame de la version blocs (le `.json` s'importe dans WordPress : Modèles → Importer depuis JSON). |
+| `exemples/` | Une réunion anonymisée et le CR attendu, pour tester. |
+
+---
+
+## 🤝 Contribuer
+
+Un CR raté, une règle à ajuster, un outil d'IA à ajouter au guide ? Ouvrez une [issue](https://github.com/reuhno/polyglots-fr-compte-rendu/issues) en joignant, si possible, le copier-coller (anonymisé) et ce que l'IA a produit.
 
 ## Licence
 
