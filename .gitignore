@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Brouillons et sorties de test locales
+*.tmp
+brouillons/
+
+# Données réelles de l'équipe, jamais publiées
+participants.local.md
+local/

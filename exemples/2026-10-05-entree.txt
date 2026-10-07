@@ -1,0 +1,233 @@
+Sophie Garnier  [12 h 01]
+Hello ! c’est sur slack ou en ligne ?
+Claire Fontaine  [12 h 06]
+ODJ :
+
+* Stats
+* Est-ce que quelqu’un serait partant pour faire les ODJ et tenir à jour la page https://fr.wordpress.org/team/
+* Question traduction : comment traduire Loader - dans le contexte de cette extension par ex https://translate.wordpress.org/projects/wp-plugins/pagefluent/
+* Autres questions...
+
+[12 h 07]
+et j’ai oublié : bilan journée de contribution pour la traduction
+[12 h 09]
+Voici les stats, depuis le 8 juin - le 7 septembre il y a eu oubli sur ce point
+[12 h 09]
+
+* Locale Managers : 5 (inchangé)
+* GTE : 7 dont 4 actifs (inchangé)
+* GPTE : 14 (+ Léa Perrin - 17/09/26)
+* PTE : 215 (+13 depuis le 8 juin 2026)
+* Contributeurs et contributrices : 4774 (+103 depuis le 8 juin 2026)
+
+[12 h 09]
+Bienvenue à [@lea](https://exemple.slack.com/team/U0000000) parmi les GPTE !
+Sophie Garnier  [12 h 11]
+J’ai pas compris le deuxième point
+Claire Fontaine  [12 h 12]
+on y vient juste après
+[12 h 12]:wink:
+Sophie Garnier  [12 h 13]
+ah ok :slightly_smiling_face:
+Claire Fontaine  [12 h 11]
+on a énormément de demandes pour devenir PTE, cela suit le mouvement de forte croissance des extensions publiées sur le repo wordpress.org
+[12 h 14]beaucoup de traduction par IA, et de messages rédigés par IA aussi
+Julien ROUX  [12 h 15]
+tu as oublié "trop" entre "beaucoup" et "de traduction"
+Claire Fontaine  [12 h 15]
+du coup Paul a fait un petit texte pour demander aux potentiels PTE de rédiger eux-mêmes leurs messages
+Antoine BL  [12 h 18]
+Pour référence, le message en question :
+
+https://exemple.slack.com/archives/C0000000/p1790751178584139?thread_ts=1790076110.503509&cid=C0000000
+
+https://exemple.slack.com/archives/C0000000/p1790629147479669?thread_ts=1790584717.181919&cid=C0000000
+Claire Fontaine  [12 h 16]
+faudra qu’on se le mette de côté @Paul
+[12 h 17]d’autres questions/remarques sur les stats ?
+[12 h 17]pensez à mettre votre pseudo ici : https://exemple.slack.com/archives/C0000000/p1791194419996989
+[12 h 18]on passe au point 2
+[12 h 20]il y a un bon moment qu’aucun ODJ (ni compte-rendu) n’a été publié avant les réunions, aussi ce serait bien si une ou deux personnes pouvaient se relayer pour les rédiger (au moins les ODJ)
+[12 h 22]voilà je pose ça là
+[12 h 22]pour le bilan de la journée de contribution :
+[12 h 22]16 participants sur place et en ligne
+Paul Morel  [12 h 23]
+Hello :wave:
+Claire Fontaine  [12 h 23]
+merci aux validateurs en ligne @Nébuleuse et @lucas
+[12 h 24]1242 trad et un peu plus de la moitié validées
+[12 h 24]et merci aussi aux participants en live : https://translate.wordpress.org/events/2026/journee-de-contribution-du-wordcamp-bretagne-2026-2/
+Paul Morel  [12 h 25]
+top bravo !
+Claire Fontaine  [12 h 25]
+on a eu aussi des belges à cette table
+[12 h 26]c’était sympa d’échanger avec une autre team
+Antoine BL  [12 h 26]
+16 participants dont 5 pour la première fois :slightly_smiling_face:
+Claire Fontaine  [12 h 27]
+c’était top d’être à deux à animer la table, à refaire
+ @lea
+Léa Perrin  [15 h 50]
+oui c’était chouette, partante pour remettre ça avec toi !
+Claire Fontaine  [15 h 53]
+vivement le prochain WordCamp alors
+Claire Fontaine  [12 h 28]
+alors on m’a soumis une demande pendant cette journée concernant "loader"
+[12 h 29]https://translate.wordpress.org/projects/wp-plugins/pagefluent/ pour du contexte
+[12 h 30]est-ce que vous avez des propositions pour traduire ce terme ?
+Sophie Garnier  [12 h 30]
+Chargement ?
+Claire Fontaine  [12 h 31]
+il s’agit de la petite icône (souvent animée) pour indiquer que le chargement est en cours
+[12 h 32]des exemples de chaînes : https://translate.wordpress.org/projects/wp-plugins/pagefluent/stable/fr/default/?filters%5Bterm%5D=loader&filters%5Bterm_scope%5D=scope_originals&filters%5Bstatus%5D=current_or_waiting_or_fuzzy_or_untranslated&filters%5Buser_login%5D=&filter=Apply+Filters&sort%5Bby%5D=priority&sort%5Bhow%5D=desc
+Marc Dubois  [12 h 33]
+hello le monde
+[12 h 36]effectivement c'est une colle
+Antoine BL  [12 h 36]
+Selon le contexte, “Chargement” ou “Animation” peuvent peut-être convenir mais j’ai rien de mieux à l’instant :confused:
+Claire Fontaine  [12 h 36]
+"animation d’attente" ?
+Marc Dubois  [12 h 37]
+c'esty ... lourd
+Thomas Girard  [12 h 38]
+Hello, désolé, pas vu qu’il y avait réunion (et pas mal de boulot en ce moment)
+[12 h 39]Loader a la notion de chargement, qui je pense est importante à conserver
+Marc Dubois  [12 h 39]
+animation de chargement ou roue de chargement
+Lucas Bernard  [12 h 39]
+"Indicateur de chargement" ?
+Claire Fontaine  [12 h 39]
+il y a aussi Animation de chargement
+Thomas Girard  [12 h 40]
+J’aime bien le mot indicateur
+Marc Dubois  [12 h 40]
+sur Microsoft on retrouve "anneau de progression"
+Lucas Bernard  [12 h 41]
+Peut-être que "Animation", ça peut faire penser qu'on peut choisir l'animation ? (parmi tout cela par exemple : https://www.loading-ui.com/ )Loading UI - spinners, loaders, and loading animations for the webFree and open source CSS and React loaders, spinners, and animations to create polished, accessible loading states for modern web apps.Loading UI
+Antoine BL  [12 h 42]
+Justement, dans le contexte du Readme c’est plus cohérent que “Chargement” amhaCapture d’écran 2026-10-05 à 12.41.39.png
+Claire Fontaine  [12 h 41]
+oui mais c’est pas toujours un anneau
+Thomas Girard  [12 h 41]
+Microsoft, ils ont fait un bouton Démarrer pour éteindre un ordinateur, alors, je sais pas si on peut les trouver fiable
+Lucas Bernard  [12 h 42]
+Les traductions FR sur les pages de la doc de Microsoft sont ignobles :stuck_out_tongue:
+Marc Dubois  [12 h 43]
+mais des fois on voit ce que les gens comprennent
+Lucas Bernard  [12 h 44]
+https://exemple.slack.com/archives/C0000000/p1791196931579109?thread_ts=1791196873.995059&cid=C0000000
+5 oct.À partir d’un fil de discussion dans traductionsJustement, dans le contexte du Readme c’est plus cohérent que “Chargement” amha
+Capture d’écran 2026-10-05 à 12.41.39.png Thomas Girard  [12 h 44]
+“Indicateur de chargement” me parait être le plus neutre. Un “chargeur” aurait été logique, mais bon, personne n’emploi ce terme
+Lucas Bernard  [12 h 44]
+ah oui j'comprends là. C'est vraiment pour selectionner l'animation. (modifié)
+Claire Fontaine  [12 h 45]
+dans le contexte de l’extension, il y a aussi la notion d’ajouter un loader ou non selon le device (modifié)
+Lucas Bernard  [12 h 46]
+Est-ce qu'on peut indiquer un chargement sans animation ?
+Thomas Girard  [12 h 46]
+Si dans cette extension c’est pour sélectionner une animation  “Animation de chargement”  me parait bien
+Si c’est pour parler de loader de manière plus générale (pour le glossaire par exemple) : “Indicateur de chargement” me parait plus pertinentClaire Fontaine  [12 h 47]
+vous croisez souvent ce terme ?
+Thomas Girard  [12 h 48]
+ça fait depuis flash et l’action script qu’on ne met plus de preloader, non ? :troll:
+Marc Dubois  [12 h 48]
+tu vois, tu donnes deux trads  directement
+Lucas Bernard  [12 h 48]
+Un peu, dont dans 2 extensions for elementor : https://translate.wordpress.org/consistency/?search=loader&set=fr%2Fdefault&project=
+Marc Dubois  [12 h 49]
+Elementor ? c'est quoi ?
+Claire Fontaine  [12 h 51]
+indicateur me semble aussi plus approprié
+Marc Dubois  [12 h 52]
+Je croyais qu'il fallait trouver une tra pour le mot Elementor :trollface: . bon , plu sserieusement si on on se dit qu'on doit trouver une trad mais qu'a la premiere trouvaille faut faire une exception, c'est pas top
+[12 h 53]je ne sais pas pourquoi mais indicateur je trouve ça un peu lourd
+Claire Fontaine  [12 h 53]
+a priori dans l’extension citée au départ, il n’y a pas forcément d’animation
+Sophie Garnier  [12 h 54]
+J'ai pas l’impression non plus
+Max  [12 h 56]
+Salut, vous avez encore le temps pour voir avec fil d'Ariane ?
+Hugo Lefèvre  [12 h 57]
+Yop, Indicateurs de chargement (perso) et Fil d’ariane à été vu dans une très vieille réunion
+Julien ROUX  [12 h 58]
+et si je ne m 'abuse, "fil d'ariane" c'ets deja francais
+Claire Fontaine  [12 h 58]
+@maxdev parle de la majuscule à Ariane
+[12 h 59]est-ce qu’on ajoute "loader" = "indicateur de chargement" au glossaire
+Sophie Garnier  [12 h 59]
+Le problème que c'est pas toujours indicateur
+Claire Fontaine  [13 h 03]
+c’est-à-dire ?
+Sophie Garnier  [13 h 03]
+Ben loader ça peut être un mot seul non ?
+Claire Fontaine  [13 h 04]
+oui et dans les exemples il est seul
+[13 h 04]c’est plutôt le contexte qui varie
+Sophie Garnier  [13 h 06]
+Donc c’est embêtant de mettre dans le glossaire « indicateur de chargement » ?
+Sophie Garnier  [12 h 59]
+Non ?
+Marc Dubois  [13 h]
+Ariane  dans une interface avec la majuscule mais dans une phrase non. il me semble qu'on a abordé le sujet hors réunion
+Claire Fontaine  [13 h]
+on en avait discuté en réunion aussi
+Marc Dubois  [13 h 01]
+ok. mais a ca avait donné  quoi du coup ?
+Claire Fontaine  [13 h 02]
+fil d’ariane, car devenu nom commun
+Max  [13 h 04]
+Ariane est un nom propre ? Normalement il devrait conserver sa majuscule car il fait référence à la figure de la mythologie grecque
+Thomas Girard  [13 h 06]
+Il me semble qu’il faut la majuscule toujours
+[13 h 06]Dans la pratique web : La minuscule (fil d’ariane) s’est largement popularisée dans l’usage quotidien du jargon numérique, mais elle relève d’une tolérance d’usage et non d’une règle académique(réponse IA google machin truc)
+Marc Dubois  [13 h 07]
+de ce que je viens de verifier, finalement je ne trouve pas de ref sans majuscule
+[13 h 08]Et meme au Quebec (pire là bas il tirerait a vue)
+Paul Morel  [13 h 32]
+oui dans le cas d'un composant d'interface c'est devenu un nom commun
+[13 h 33](et bon oui le québec c'est bien beau mais bon ils ne sont toujours pas inclusif dans leur admin wp alors bon c'est pas le modèle parfait hein :wink: )
+Marc Dubois  [16 h 24]
+bah oui sauf que là ce n'e'st pas le même sujet. l'interface d'administration WP et la traduction des extensions elle même. Par ailleurs le fil d'Ariane sans majuscule est plus classé comme faute excusable que comme langage courant. Je ne connais pas même si j'étais déjà par là en 03/2023 les raison (profonde) du choix de la minuscule.
+Je viens de poser les questions autour de moi et sur le net avec a peu prés unanimement la même réponse le A est majuscule.  C'est un nom , donc pas de la capitalisation gratuite, du camel case ou autre transformation bizarroïde.
+J'ajoute que dans les faits , il n'y a eu qu'une modif faite par @tomg de minuscule vers majuscule, les autres occurrences de consictensy donne uniquement des A majuscules.
+Lucas Bernard  [13 h 10]
+Donc on corrige dans le glossaire et dans cette extension "DesignSetGo" ?
+https://translate.wordpress.org/consistency/?search=breadcrumb&set=fr%2Fdefault&project=
+Thomas Girard  [13 h 13]
+Je corrige sur l’extension
+Marc Dubois  [13 h 11]
+on vote ?
+[13 h 14]le glossaire ?
+Simple Poll  [13 h 15]
+avec ou sans majuscule?:one: Fil d'Ariane    8
+@tomg, @maxdev, @Sophie, @Antoine BL, @Nébuleuse, @lucas, @user1234, @user5678:two: Fil d'arianeRespondents: 8Created by @maxdev with /pollClaire Fontaine  [13 h 15]
+en général on ne fait pas vraiment de votes
+Marc Dubois  [13 h 16]
+mais il y a discussion et on tente de trouver un consensus
+[13 h 17]le resultat des presents donne un sens quand même
+Sophie Garnier  [13 h 17]
+Il y a toujours plus ou moins un vote non ? Avec les pouces ?
+Marc Dubois  [13 h 19]
+pourquoi penses tu que ça ne semble pas etre la bonne pratique ?
+Claire Fontaine  [13 h 20]
+un changement dans le glossaire implique qu’on aille modifier les chaînes dans le même sens, et c’est pas mal de savoir où on va avant de faire une modif
+Marc Dubois  [13 h 22]
+la consistency donne tout avec un A majuscule
+[13 h 22]on a deja fait ça pour d'autres termes
+[13 h 23]je me rappelle être sorti de réunion et avoir avec d'autres fait des modifs dans plusieurs extensions
+Claire Fontaine  [13 h 23]
+oui on a déjà fait des modifs du glossaire
+Marc Dubois  [13 h 23]
+mais bon, si ce n'est pas la bonne pratique faisons autrement
+Claire Fontaine  [13 h 25]
+je propose de voir ça avec @Hugo Lefèvre et @Paul aussi
+Marc Dubois  [13 h 25]
+les GTE en somme
+Thomas Girard  [13 h 26]
+Je crois me rappeler qu’on avait déjà débattu sur fil d’Ariane, il y a longtemps de ça, et là, ça ne pose vraiment pas de problème car toutes les chaînes étaient similaires sauf dans 1 extension (que j’ai corrigé à l’instant). Désolé, s’il aurait fallu attendre
+Marc Dubois  [13 h 26]
+bon 13h30 ...faut que je file. on fait loader a la prochaine ?
+Claire Fontaine  [13 h 27]
+oui moi aussi je dois filer
+[13 h 28]</reunion> merci et on peut poursuivre la discussion sur ces deux sujets
