@@ -1,5 +1,7 @@
 # CR des réunions WordPress FR : skill de compte-rendu
 
+Projet communautaire, non officiel : il n'est ni produit ni approuvé par la WordPress Foundation, ni par l'équipe Polyglots.
+
 ## À quoi ça sert
 
 Ce dossier contient un prompt (un « skill ») qui transforme le copier-coller brut d'une réunion Slack de l'équipe de traduction (ou de documentation) de WordPress francophone en compte-rendu au format habituel de l'équipe, prêt à publier sur https://fr.wordpress.org/team/.
@@ -69,3 +71,7 @@ Les noms, pseudos et liens Slack de l'exemple sont fictifs ; la conversation, el
 - **Version Markdown** (par défaut) : dans l'éditeur visuel de WordPress, coller le texte ; l'éditeur de blocs convertit le Markdown en blocs (titres, listes, paragraphes). Le titre du post se saisit dans le champ « titre ». Vérifier les niveaux de titre, la ligne 📌 et le séparateur.
 - **Version blocs** : demander « version blocs » à l'IA, puis, dans l'éditeur, ouvrir l'éditeur de code (menu « Options », « Éditeur de code »), coller le HTML, revenir à l'éditeur visuel. Ce HTML suit la composition « CR réunion traduction » de l'équipe, déjà remplie : inutile d'insérer la composition avant. Testé le 2026-10-07 dans WordPress Playground (WordPress 7.1) : aucun bloc signalé comme invalide, colonnes et lignes 📌 comprises.
 - Dans les deux cas : catégorie et étiquettes de l'équipe (`compte-rendu`, `traduction`, `traductions` pour la traduction ; `compte-rendu`, `documentation` pour la documentation), puis relecture de tous les `[À VÉRIFIER]` avant de publier.
+
+## Licence
+
+GPL-2.0-or-later, comme WordPress. Texte complet dans le fichier [LICENSE](LICENSE).
